@@ -1,0 +1,17 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "C:\\Users\\yuuya\\Documents\\git\\qmdp-net\\train.py",
+            "console": "integratedTerminal",
+            "args": ["C:\\Users\\yuuya\\Documents\\git\\qmdp-net\\data\\grid10", "--loadmodel", "C:\\Users\\yuuya\\Documents\\git\\qmdp-net\\data\\grid10\\trained-model\\final.chk", "--epochs", "0"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+model_checkpoint_path: "final.chk"
+all_model_checkpoint_paths: "model.chk-0"
+all_model_checkpoint_paths: "model.chk-1"
+all_model_checkpoint_paths: "model.chk-2"
+all_model_checkpoint_paths: "model.chk-3"
+all_model_checkpoint_paths: "model.chk-4"
+all_model_checkpoint_paths: "final.chk"

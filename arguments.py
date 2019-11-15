@@ -45,7 +45,7 @@ def parse_args(arglist):
                         default=15,
                         help='Total number of learning rate decay steps')
     parser.add_argument('--epochs', type=int,
-                        default=1000,
+                        default=5,
                         help='Maximum number of epochs')
 
     parser.add_argument('--cache', nargs='*',

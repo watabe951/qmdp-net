@@ -89,7 +89,7 @@ def run_training(params):
     for epoch in range(params.epochs):
         training_loss = 0.0
         for step in range(train_feed.steps_in_epoch):
-            data = train_iterator.next()
+            data = train_iterator.__next__()
             feed_dict = {network.placeholders[i]: data[i] for i in range(len(network.placeholders))}
 
             _, loss, _ = sess.run([network.train_op, network.loss, network.update_belief_op],
@@ -102,7 +102,7 @@ def run_training(params):
         # accumulate loss over the enitre validation set
         valid_loss = 0.0
         for step in range(valid_feed.steps_in_epoch):  # params.validbatchsize
-            data = valid_iterator.next()
+            data = valid_iterator.__next__()
             assert step > 0 or np.isclose(data[3], 1.0).all()
             feed_dict = {network.placeholders[i]: data[i] for i in range(len(network.placeholders))}
             loss, _ = sess.run([network.loss, network.update_belief_op], feed_dict=feed_dict)
@@ -193,7 +193,7 @@ def run_eval(params, modelfile):
     expert_results = []
     network_results = []
     for eval_i in range(params.eval_samples):
-        res = eval_iterator.next()
+        res = eval_iterator.__next__()
         expert_results.append(res[:1]) # success, traj_len, collided, reward_sum
         network_results.append(res[1:])
 
